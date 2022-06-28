@@ -1,9 +1,3 @@
-// var randomQuote = "https://quotes15.p.rapidapi.com/quotes/random/";
-
-// fetch(randomQuote).then(function (response) {
-//   console.log(response);
-// });
-
 var options = {
   method: "GET",
   headers: {
@@ -14,5 +8,12 @@ var options = {
 
 fetch("https://quotes15.p.rapidapi.com/quotes/random/", options)
   .then((response) => response.json())
-  .then((response) => console.log(response))
+  .then((response) => {
+    console.log(response);
+    var textarea = document.getElementById("message");
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click", function handleClick() {
+      textarea.innerHTML = response.content;
+    });
+  })
   .catch((err) => console.error(err));
