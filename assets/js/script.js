@@ -1,4 +1,4 @@
-var div = document.querySelector("div");
+var div = document.getElementById("textarea");
 var btn = document.getElementById("btn1");
 
 btn.addEventListener("click", function () {
