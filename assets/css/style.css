@@ -1,4 +1,15 @@
+#btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 345px 800px;
+    padding: 20px 200px;
+}
 
-#message{
-    margin-top: 30px;
+#quote1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -616px 765px;
+    padding: 20px 200px;
 }
