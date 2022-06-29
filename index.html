@@ -2,75 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Your Favorite Meme Generator</title>
-    <!--Tailwind CDN-->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-    <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Your Favorite Meme Generator</title>
+  <!--Tailwind CDN-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="header"
-        class="back-image-white flex flex-col sm:flex-row w-full leading-tight sm:leading-loose justify-between">
-        <div class="back-image-white flex flex-col md:flex-row w-auto">
-            <h1 class="font-nogo text-3xl ml-4 w-full min-w-0">Welcome Meme Generator!</h1>
-        </div>
-        <div id="myModel" class="model">
+  <div id="header"
+    class="back-image-white flex flex-col sm:flex-row w-full leading-tight sm:leading-loose justify-between">
+    <div class="back-image-white flex flex-col md:flex-row w-auto">
+      <h1 class="font-nogo text-3xl ml-4 w-full min-w-0">Welcome Meme Generator!</h1>
+    </div>
+    <div id="myModel" class="model">
 
-        </div>
-        <div class="flex flex-col sm:flex-row">
-            <div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-1 invisible" role="alert">
-
-            </div>
-
-        </div>
     </div>
     <div class="flex flex-col sm:flex-row">
-        <div
-            class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow-0 border-2 border-solid border-black">
-            <h1
-                class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted">
-                Placeholder (Google Image)
-            </h1>
-            <table>
-                <thead>
-                    <th>Search Here Your Favorite Image</th>
+      <div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-1 invisible" role="alert">
 
-                </thead>
-                <tbody id="imageSearches">
-                </tbody>
-            </table>
-            <div class="content-center mx-auto my-2">
-                <button id="clear-searches"
-                    class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">Clear
-                    Searches</button>
-            </div>
-        </div>
-        <div
-            class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow border-2 border-solid border-black">
-            <h1
-                class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted">
-                PLACEHOLDER
-            </h1>
-            <table id="events" class="p-2">
-                <tr></tr>
-            </table>
-        </div>
-        
+      </div>
 
     </div>
-    <div class="flex flex-col sm:flex-row w-full" id="image-div"></div>
-    <div id="secondModel" class="model">
+  </div>
+  <div class="flex flex-col sm:flex-row">
+    <div
+      class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow-0 border-2 border-solid border-black">
+      <h1
+        class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted">
+        Placeholder (Google Image)
+      </h1>
+      <table>
+        <thead>
+          <th>Search Here Your Favorite Image</th>
 
-
+        </thead>
+        <tbody id="imageSearches">
+        </tbody>
+      </table>
+      <div class="content-center mx-auto my-2">
+        <!--SEARCH BUTTON-->
+        <button id="searchImage"
+          class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">
+          Search Images</button>
+      </div>
     </div>
-    <script src="./assets/js/script.js"></script>
+    <div
+      class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow border-2 border-solid border-black">
+      <h1
+        class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted">
+        PLACEHOLDER
+      </h1>
+      <div class="content-center mx-auto my-2">
+        <!--DOWNLOAD BUTTON-->
+        <button id="downloadBtn"
+          class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">Download</button>
+      </div>
+      <div class="content-center mx-auto my-2">
+        <!--SHARE BUTTON-->
+        <button id="shareBtn"
+          class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">Share</button>
+      </div>      
+      <table id="events" class="p-2">
+        <tr></tr>
+      </table>
+    </div>
+
+
+  </div>
+  <div class="flex flex-col sm:flex-row w-full" id="image-div"></div>
+  <div id="secondModel" class="model">
+
+
+  </div>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
