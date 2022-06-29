@@ -11,6 +11,8 @@ btn.addEventListener("click", function () {
       var quote = document.createElement("textarea");
       quote.textContent = data.content;
       div.appendChild(quote);
+      var element = document.getElementById("btn1");
+      element.remove();
     });
 });
 
