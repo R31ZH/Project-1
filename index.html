@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="dark">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Your Favorite Meme Generator</title>
   <!--Tailwind CDN-->
@@ -48,8 +46,7 @@
       </table>
       <div class="content-center mx-auto my-2">
         <!--SEARCH BUTTON-->
-        <button id="searchImage"
-          class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">
+        <button id="btn1" class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">
           Search Images</button>
       </div>
     </div>
@@ -59,27 +56,26 @@
         class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted">
         PLACEHOLDER
       </h1>
-      <div class="content-center mx-auto my-2">
-        <!--DOWNLOAD BUTTON-->
-        <button id="downloadBtn"
-          class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">Download</button>
+      <div id="textarea">
+
       </div>
-      <div class="content-center mx-auto my-2">
-        <!--SHARE BUTTON-->
-        <button id="shareBtn"
-          class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">Share</button>
-      </div>      
-      <table id="events" class="p-2">
-        <tr></tr>
-      </table>
     </div>
-
-
+    <div class="content-center mx-auto my-2">
+      <!--DOWNLOAD BUTTON-->
+      <button id="downloadBtn"
+        class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">Download</button>
+    </div>
+    <div class="content-center mx-auto my-2">
+      <!--SHARE BUTTON-->
+      <button id="shareBtn"
+        class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">Share</button>
+    </div>
+    <table id="events" class="p-2">
+      <tr></tr>
+    </table>
   </div>
   <div class="flex flex-col sm:flex-row w-full" id="image-div"></div>
   <div id="secondModel" class="model">
-
-
   </div>
   <script src="./assets/js/script.js"></script>
 </body>
