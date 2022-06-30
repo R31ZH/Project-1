@@ -35,7 +35,6 @@ function myFunction() {
 }
 
 function searchedImage() {
-  // if (event.target.id === "submitBtn") {
   var imageName = $("#imageSearch").val();
   recentSearch.push(imageName);
   localStorage.setItem("recentSearch", JSON.stringify(recentSearch));
@@ -61,20 +60,31 @@ function searchedImage() {
       imageLoc.appendChild(imagesearched);
     })
     .catch((err) => console.error(err));
-  // } else {
-  //   var imageName = $(this).text();
-  // }
-
-  // console.log(imageName);
-  // if (imageName) {
-  //   getApi(imageName);
-  // }
 }
 
-// fetchButton.addEventListener("click", searchedImage);
-//! CYRUS img generation END
 fetchButton.addEventListener("click", function (event) {
   event.preventDefault();
   searchedImage();
   generation();
+});
+//! CYRUS img generation END
+
+//! Share Button Functionality
+var shareData = {
+  title: "Meme Generator",
+  text: "Share Meme Generator!",
+  url: "https://developer.mozilla.org",
+};
+
+var btn = document.getElementById("shareBtn");
+var resultPara = document.querySelector(".result");
+
+// Share must be triggered by "user activation"
+btn.addEventListener("click", async () => {
+  try {
+    await navigator.share(shareData);
+    resultPara.textContent = "MDN shared successfully";
+  } catch (err) {
+    resultPara.textContent = "Error: " + err;
+  }
 });
