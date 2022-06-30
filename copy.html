@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html>
   <head>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Your Favorite Meme Generator</title>
@@ -21,14 +21,14 @@
     ></script>
   </head>
 
-  <body>
+  <body class="bg-[#7d8491]">
     <div
       id="header"
       class="back-image-white flex flex-col sm:flex-row w-full leading-tight sm:leading-loose justify-between"
     >
       <div class="back-image-white flex flex-col md:flex-row w-auto">
         <h1
-          class="font-mono text-5xl ml-4 w-full min-w-0 font style bg-teal-200 border-4 rounded-lg border-red-800 bg-orange-300"
+          class="font-nogo text-3xl ml-4 w-full min-w-0 border-2 rounded-lg bg-[#014f86] border-yellow-900"
         >
           Welcome to Meme Generator!
         </h1>
@@ -46,39 +46,40 @@
         class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow-0 border-2 border-solid border-black"
       >
         <h1
-          class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted FontMonaco"
+          class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted"
         >
-          Placeholder (Google Image)
+          Meme Workshop
         </h1>
         <table>
           <thead>
-            <th>Search Here for Your Favorite Image</th>
+            <th>We Encourage You to be Creative!</th>
           </thead>
           <tbody id="imageSearches"></tbody>
         </table>
         <!-- ! CYRUS SEARCH -->
         <div class="searchBoxDiv">
           <form action="" method="post" id="location-form">
-            <label for="imageFor">Welcome! Search for an image here:</label>
+            <label for="imageFor">Input Your Subject to the Right:</label>
             <input
+              class="border-2 rounded-lg border-red-800"
               type="text"
               id="imageSearch"
-              name="image"
-              class="border-4 rounded-md border-red-800"
+              name="images"
             /><br /><br />
-            <input id="submitBtn" type="submit" value="Submit" />
+            <input
+              class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black border-red-800"
+              id="submitBtn"
+              type="submit"
+              value="Generate Meme"
+            />
           </form>
         </div>
         <!-- ! CYRUS SEARCH -->
-        <div class="content-center mx-auto my-2">
-          <!--SEARCH BUTTON-->
-          <button
-            id="btn1"
-            class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black bg-red-300"
-          >
-            Generate Meme
-          </button>
-        </div>
+        <!-- <div class="content-center mx-auto my-2"> -->
+        <!--SEARCH BUTTON-->
+        <!-- <button id="btn1" class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black ">
+          Generate Meme</button>
+      </div> -->
       </div>
       <div
         class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow border-2 border-solid border-black"
@@ -86,36 +87,37 @@
         <h1
           class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted"
         >
-          PLACEHOLDER
+          Meme Product
         </h1>
         <div id="imageLoc"></div>
 
         <div id="textarea"></div>
       </div>
-      <div class="content-center mx-auto my-2">
-        <!--DOWNLOAD BUTTON-->
-        <button
-          id="downloadBtn"
-          class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black bg-red-300"
-        >
-          Download
-        </button>
-      </div>
-      <div class="content-center mx-auto my-2">
-        <!--SHARE BUTTON-->
-        <button
-          id="shareBtn"
-          class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black bg-red-300"
-        >
-          Share
-        </button>
-      </div>
       <table id="events" class="p-2">
         <tr></tr>
       </table>
     </div>
+
+    <div class="grid gap-4">
+      <!--DOWNLOAD BUTTON-->
+      <button
+        id="downloadBtn"
+        class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-1 col-end-3 border-red-800"
+      >
+        Download
+      </button>
+
+      <!--SHARE BUTTON-->
+      <button
+        id="shareBtn"
+        class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-5 col-end-7 border-red-800"
+      >
+        Share
+      </button>
+    </div>
     <div class="flex flex-col sm:flex-row w-full" id="image-div"></div>
     <div id="secondModel" class="model"></div>
+
     <script src="./assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>

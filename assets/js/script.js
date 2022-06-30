@@ -10,6 +10,10 @@ function generation() {
     .then(function (data) {
       console.log(data);
       var quote = document.createElement("textarea");
+      quote.setAttribute(
+        "class",
+        "bg-blue-500 text-white w-full inset-x-0 top-0"
+      );
       quote.textContent = data.content;
       div.appendChild(quote);
       var element = document.getElementById("submitBtn");
@@ -73,18 +77,18 @@ fetchButton.addEventListener("click", function (event) {
 var shareData = {
   title: "Meme Generator",
   text: "Share Meme Generator!",
-  url: "https://developer.mozilla.org",
+  url: "https://r31zh.github.io/Project-1/",
 };
 
 var btn = document.getElementById("shareBtn");
-var resultPara = document.querySelector(".result");
-
 // Share must be triggered by "user activation"
 btn.addEventListener("click", async () => {
   try {
     await navigator.share(shareData);
-    resultPara.textContent = "MDN shared successfully";
-  } catch (err) {
-    resultPara.textContent = "Error: " + err;
-  }
+  } catch (err) {}
 });
+//! Share Button Functionality
+
+//!Download Button Functionality
+
+//!Download Button Functionality
