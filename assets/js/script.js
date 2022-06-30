@@ -59,6 +59,7 @@ function searchedImage() {
       var imagesearched = document.createElement("img");
       imagesearched.setAttribute("src", response.response.images[0].image.url);
       imageLoc.appendChild(imagesearched);
+            
     })
     .catch((err) => console.error(err));
   // } else {
@@ -78,3 +79,25 @@ fetchButton.addEventListener("click", function (event) {
   searchedImage();
   generation();
 });
+
+// download button: 
+
+
+// function myFunction() {
+//   var x = document.getElementById("myAnchor").download;
+//   document.getElementById("demo").innerHTML = x;
+// }
+// function downloadFunction() {
+//   document.getElementById("#downloadBtn")
+
+// }
+// var fetchButton = document.getElementById("submitBtn");
+
+var downloadFunction = document.getElementById("downloadBtn") 
+
+downloadFunction.addEventListener("click", function (event){
+// var download1 = document.getElementById("downloadBtn");
+const blob1 = new Blob([imageLoc], { type: ".jpg" })
+downloadFunction.href = URL.createObjectURL(blob1);
+console.log(blob1)
+})
