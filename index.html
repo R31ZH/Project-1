@@ -16,7 +16,7 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-[#7d8491]">
+<body>
   <div id="header"
     class="back-image-white flex flex-col sm:flex-row w-full leading-tight sm:leading-loose justify-between">
     <div class="back-image-white flex flex-col md:flex-row w-auto">
@@ -34,14 +34,14 @@
   </div>
   <div class="flex flex-col sm:flex-row">
     <div
-      class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow-0 border-2 border-solid border-black col-start-4 col-end-6">
+      class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow-0 border-2 border-solid border-black">
       <h1
         class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted">
-        Meme Workshop
+        Placeholder (Google Image)
       </h1>
       <table>
         <thead>
-          <th>Search for an image here:</th>
+          <th>Search Here Your Favorite Image</th>
 
         </thead>
         <tbody id="imageSearches">
@@ -52,7 +52,8 @@
         <form action="" method="post" id="location-form">
           <label for="imageFor">Welcome! Search for an image here:</label>
           <input type="text" id="imageSearch" name="images"><br><br>
-          <input class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black" id="submitBtn"
+          <!--SEARCH BUTTON-->
+          <input class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black" id="submitBtn"
             type="submit" value="Generate Meme">
         </form>
       </div>
@@ -62,7 +63,7 @@
       class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow border-2 border-solid border-black">
       <h1
         class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted">
-        Meme Product
+        PLACEHOLDER
       </h1>
       <div id=imageLoc> </div>
 
@@ -70,27 +71,25 @@
 
       </div>
     </div>
+    <div class="content-center mx-auto my-2">
+      <!--DOWNLOAD BUTTON-->
+      <button id="downloadBtn"
+        class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">Download</button>
+    </div>
+    <div class="content-center mx-auto my-2">
+      <!--SHARE BUTTON-->
+      <button id="shareBtn"
+        class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">Share</button>
+    </div>
     <table id="events" class="p-2">
       <tr></tr>
     </table>
   </div>
-
-  <div class="grid gap-4 sm:w-auto">
-    <!--DOWNLOAD BUTTON-->
-    <button id="downloadBtn"
-      class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-3 col-end-5 ">Download</button>
-
-    <!--SHARE BUTTON-->
-    <button id="shareBtn"
-      class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-5 col-end-7">Share</button>
-  </div>
   <div class="flex flex-col sm:flex-row w-full" id="image-div"></div>
   <div id="secondModel" class="model">
   </div>
-
   <script src="./assets/js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </body>
 
 </html>
