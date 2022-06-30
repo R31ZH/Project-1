@@ -10,6 +10,7 @@ function generation() {
     .then(function (data) {
       console.log(data);
       var quote = document.createElement("textarea");
+      quote.setAttribute("class", "bg-blue-500 text-white w-full");
       quote.textContent = data.content;
       div.appendChild(quote);
       var element = document.getElementById("submitBtn");
