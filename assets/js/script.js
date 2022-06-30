@@ -2,7 +2,7 @@
 var div = document.getElementById("textarea");
 var btn = document.getElementById("btn1");
 
-btn.addEventListener("click", function () {
+function generation() {
   fetch("https://quotes15.p.rapidapi.com/quotes/random/", options)
     .then(function (response) {
       return response.json();
@@ -12,10 +12,10 @@ btn.addEventListener("click", function () {
       var quote = document.createElement("textarea");
       quote.textContent = data.content;
       div.appendChild(quote);
-      var element = document.getElementById("btn1");
+      var element = document.getElementById("submitBtn");
       element.remove();
     });
-});
+}
 
 var options = {
   method: "GET",
@@ -34,47 +34,47 @@ function myFunction() {
   document.getElementById("myForm").submit();
 }
 
-function searchedImage(event) {
-  event.preventDefault();
-  console.log(event.target.id);
-  if (event.target.id === "submitBtn") {
-    var imageName = $("#imageSearch").val();
-    recentSearch.push(imageName);
-    localStorage.setItem("recentSearch", JSON.stringify(recentSearch));
+function searchedImage() {
+  // if (event.target.id === "submitBtn") {
+  var imageName = $("#imageSearch").val();
+  recentSearch.push(imageName);
+  localStorage.setItem("recentSearch", JSON.stringify(recentSearch));
 
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "3578c7131cmshc9b6f560358462ap140906jsna7ea811bc316",
-        "X-RapidAPI-Host": "google-image-search1.p.rapidapi.com",
-      },
-    };
-    // where paris is marked in the link is where we need the search bar connected to
-    fetch(
-      `https://google-image-search1.p.rapidapi.com/v2/?q=${imageName}&hl=en`,
-      options
-    )
-      .then((response) => response.json())
-      .then(function (response) {
-        console.log(response);
-        console.log(response.response.images[0].image.url);
-        var imagesearched = document.createElement("img");
-        imagesearched.setAttribute(
-          "src",
-          response.response.images[0].image.url
-        );
-        imageLoc.appendChild(imagesearched);
-      })
-      .catch((err) => console.error(err));
-  } else {
-    var imageName = $(this).text();
-  }
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "3578c7131cmshc9b6f560358462ap140906jsna7ea811bc316",
+      "X-RapidAPI-Host": "google-image-search1.p.rapidapi.com",
+    },
+  };
+  // where paris is marked in the link is where we need the search bar connected to
+  fetch(
+    `https://google-image-search1.p.rapidapi.com/v2/?q=${imageName}&hl=en`,
+    options
+  )
+    .then((response) => response.json())
+    .then(function (response) {
+      console.log(response);
+      console.log(response.response.images[0].image.url);
+      var imagesearched = document.createElement("img");
+      imagesearched.setAttribute("src", response.response.images[0].image.url);
+      imageLoc.appendChild(imagesearched);
+    })
+    .catch((err) => console.error(err));
+  // } else {
+  //   var imageName = $(this).text();
+  // }
 
-  console.log(imageName);
-  if (imageName) {
-    getApi(imageName);
-  }
+  // console.log(imageName);
+  // if (imageName) {
+  //   getApi(imageName);
+  // }
 }
 
-fetchButton.addEventListener("click", searchedImage);
+// fetchButton.addEventListener("click", searchedImage);
 //! CYRUS img generation END
+fetchButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  searchedImage();
+  generation();
+});
