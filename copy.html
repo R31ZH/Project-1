@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Your Favorite Meme Generator</title>
+    <!--Tailwind CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <!--JQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div
+      id="header"
+      class="back-image-white flex flex-col sm:flex-row w-full leading-tight sm:leading-loose justify-between"
+    >
+      <div class="back-image-white flex flex-col md:flex-row w-auto">
+        <h1
+          class="font-mono text-5xl ml-4 w-full min-w-0 font style bg-teal-200 border-4 rounded-lg border-red-800 bg-orange-300"
+        >
+          Welcome to Meme Generator!
+        </h1>
+      </div>
+      <div id="myModel" class="model"></div>
+      <div class="flex flex-col sm:flex-row">
+        <div
+          class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-1 invisible"
+          role="alert"
+        ></div>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row">
+      <div
+        class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow-0 border-2 border-solid border-black"
+      >
+        <h1
+          class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted FontMonaco"
+        >
+          Placeholder (Google Image)
+        </h1>
+        <table>
+          <thead>
+            <th>Search Here for Your Favorite Image</th>
+          </thead>
+          <tbody id="imageSearches"></tbody>
+        </table>
+        <!-- ! CYRUS SEARCH -->
+        <div class="searchBoxDiv">
+          <form action="" method="post" id="location-form">
+            <label for="imageFor">Welcome! Search for an image here:</label>
+            <input
+              type="text"
+              id="imageSearch"
+              name="image"
+              class="border-4 rounded-md border-red-800"
+            /><br /><br />
+            <input id="submitBtn" type="submit" value="Submit" />
+          </form>
+        </div>
+        <!-- ! CYRUS SEARCH -->
+        <div class="content-center mx-auto my-2">
+          <!--SEARCH BUTTON-->
+          <button
+            id="btn1"
+            class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black bg-red-300"
+          >
+            Generate Meme
+          </button>
+        </div>
+      </div>
+      <div
+        class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow border-2 border-solid border-black"
+      >
+        <h1
+          class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted"
+        >
+          PLACEHOLDER
+        </h1>
+        <div id="imageLoc"></div>
+
+        <div id="textarea"></div>
+      </div>
+      <div class="content-center mx-auto my-2">
+        <!--DOWNLOAD BUTTON-->
+        <button
+          id="downloadBtn"
+          class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black bg-red-300"
+        >
+          Download
+        </button>
+      </div>
+      <div class="content-center mx-auto my-2">
+        <!--SHARE BUTTON-->
+        <button
+          id="shareBtn"
+          class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black bg-red-300"
+        >
+          Share
+        </button>
+      </div>
+      <table id="events" class="p-2">
+        <tr></tr>
+      </table>
+    </div>
+    <div class="flex flex-col sm:flex-row w-full" id="image-div"></div>
+    <div id="secondModel" class="model"></div>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>
