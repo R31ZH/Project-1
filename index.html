@@ -11,6 +11,9 @@
   <!--JQuery-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -44,18 +47,29 @@
         <tbody id="imageSearches">
         </tbody>
       </table>
+      <!-- ! CYRUS SEARCH -->
+      <div class="searchBoxDiv"> box I want stuff to go into
+        <form action="" method="post" id="location-form">
+          <label for="imageFor">Welcome! Search for an image here:</label>
+          <input type="text" id="imageSearch" name="images"><br><br>
+          <input id="submitBtn" type="submit" value="Submit">
+        </form>
+      </div>
+      <!-- ! CYRUS SEARCH -->
       <div class="content-center mx-auto my-2">
         <!--SEARCH BUTTON-->
         <button id="btn1" class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black">
-          Search Images</button>
+          Generate Meme</button>
       </div>
     </div>
-    <div
+    <div  
       class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow border-2 border-solid border-black">
       <h1
         class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted">
         PLACEHOLDER
       </h1>
+      <div id=imageLoc> </div>
+
       <div id="textarea">
 
       </div>
@@ -78,6 +92,7 @@
   <div id="secondModel" class="model">
   </div>
   <script src="./assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 
 </html>
