@@ -10,6 +10,10 @@ function generation() {
     .then(function (data) {
       console.log(data);
       var quote = document.createElement("textarea");
+      quote.setAttribute(
+        "class",
+        "bg-blue-500 text-white w-full inset-x-0 top-0"
+      );
       quote.textContent = data.content;
       div.appendChild(quote);
       var element = document.getElementById("submitBtn");
@@ -35,7 +39,6 @@ function myFunction() {
 }
 
 function searchedImage() {
-  // if (event.target.id === "submitBtn") {
   var imageName = $("#imageSearch").val();
   recentSearch.push(imageName);
   localStorage.setItem("recentSearch", JSON.stringify(recentSearch));
@@ -62,18 +65,8 @@ function searchedImage() {
             
     })
     .catch((err) => console.error(err));
-  // } else {
-  //   var imageName = $(this).text();
-  // }
-
-  // console.log(imageName);
-  // if (imageName) {
-  //   getApi(imageName);
-  // }
 }
 
-// fetchButton.addEventListener("click", searchedImage);
-//! CYRUS img generation END
 fetchButton.addEventListener("click", function (event) {
   event.preventDefault();
   searchedImage();
@@ -101,3 +94,24 @@ const blob1 = new Blob([imageLoc], { type: ".jpg" })
 downloadFunction.href = URL.createObjectURL(blob1);
 console.log(blob1)
 })
+//! CYRUS img generation END
+
+//! Share Button Functionality
+var shareData = {
+  title: "Meme Generator",
+  text: "Share Meme Generator!",
+  url: "https://r31zh.github.io/Project-1/",
+};
+
+var btn = document.getElementById("shareBtn");
+// Share must be triggered by "user activation"
+btn.addEventListener("click", async () => {
+  try {
+    await navigator.share(shareData);
+  } catch (err) {}
+});
+//! Share Button Functionality
+
+//!Download Button Functionality
+
+//!Download Button Functionality
