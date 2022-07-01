@@ -15,3 +15,5 @@ Cyrus, Jeremiah, Jenny, and Max
 Start Creating [here!]https://r31zh.github.io/Project-1/
 
 ## SCREENSHOT:
+
+![SS](Images/screenshot.png)
