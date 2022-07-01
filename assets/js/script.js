@@ -113,5 +113,11 @@ btn.addEventListener("click", async () => {
 //! Share Button Functionality
 
 //!Download Button Functionality
-
+var downloadFunction = document.getElementById("downloadBtn");
+downloadFunction.addEventListener("click", function (event) {
+  // var download1 = document.getElementById("downloadBtn");
+  const blob1 = new Blob([imageLoc], { type: ".jpg" });
+  downloadFunction.href = URL.createObjectURL(blob1);
+  console.log(blob1);
+});
 //!Download Button Functionality
