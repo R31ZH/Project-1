@@ -20,15 +20,14 @@
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
     <div
       id="header"
       class="back-image-white flex flex-col sm:flex-row w-full leading-tight sm:leading-loose justify-between"
     >
-      <div class="back-image-white flex flex-col md:flex-row w-auto">
+      <div class="back-image-white flex flex-col md:flex-row w-full">
         <h1
-          class="font-bold text-3xl ml-12 w-full min-w-0 border-2 rounded-lg bg-slate-400 border-zinc-800"
+          class="font-bold text-3xl ml-12 w-full min-w-0 border-2 rounded-lg bg-slate-400 border-zinc-800 text-center"
         >
           Welcome to Meme Generator!
         </h1>
@@ -67,7 +66,7 @@
               class="hover:border-dotted hover:border-blue-500 border-2 rounded-lg border-emerald-900"
             /><br /><br />
             <input
-              class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black border-4 border-y-zinc-600 border-x-zinc-800"
+              class="bg-[#014F86] hover:bg-[#9A8C98] p-2 rounded-lg border border-solid border-black border-4 border-y-zinc-600 border-x-zinc-800"
               id="submitBtn"
               type="submit"
               value="Generate Meme"
@@ -85,35 +84,31 @@
           Meme Product
         </h1>
         <div id="imageLoc"></div>
-
         <div id="textarea"></div>
       </div>
       <table id="events" class="p-2">
         <tr></tr>
       </table>
     </div>
-
     <div class="grid gap-4 sm:w-auto">
       <!--DOWNLOAD BUTTON-->
       <a
         id="downloadBtn"
         download="meme.jpg"
-        class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-3 col-end-5 border-4 border-y-zinc-600 border-x-zinc-800"
+        class="bg-[#014F86] hover:bg-[#9A8C98] p-2 rounded-lg border border-solid border-black col-start-3 col-end-5 border-4 border-y-zinc-600 border-x-zinc-800 text-center"
       >
         Download
       </a>
-
       <!--SHARE BUTTON-->
       <button
         id="shareBtn"
-        class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-5 col-end-7 border-4 border-y-zinc-600 border-x-zinc-800"
+        class="bg-[#014F86] hover:bg-[#9A8C98] p-2 rounded-lg border border-solid border-black col-start-5 col-end-7 border-4 border-y-zinc-600 border-x-zinc-800 mr-9"
       >
         Share
       </button>
     </div>
     <div class="flex flex-col sm:flex-row w-full" id="image-div"></div>
     <div id="secondModel" class="model"></div>
-
     <script src="./assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>

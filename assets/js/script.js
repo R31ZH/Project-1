@@ -1,7 +1,6 @@
 //! Jeremiahs Quote Generation START
 var div = document.getElementById("textarea");
 var btn = document.getElementById("btn1");
-
 function generation() {
   fetch("https://quotes15.p.rapidapi.com/quotes/random/", options)
     .then(function (response) {
@@ -20,7 +19,6 @@ function generation() {
       element.remove();
     });
 }
-
 var options = {
   method: "GET",
   headers: {
@@ -29,7 +27,6 @@ var options = {
   },
 };
 //! Jeremiahs Quote Generation END
-
 //! CYRUS img generation START
 var fetchButton = document.getElementById("submitBtn");
 var recentSearch = JSON.parse(localStorage.getItem("recentSearch")) || [];
@@ -37,12 +34,10 @@ var imageLoc = document.querySelector("#imageLoc");
 function myFunction() {
   document.getElementById("myForm").submit();
 }
-
 function searchedImage() {
   var imageName = $("#imageSearch").val();
   recentSearch.push(imageName);
   localStorage.setItem("recentSearch", JSON.stringify(recentSearch));
-
   const options = {
     method: "GET",
     headers: {
@@ -65,21 +60,18 @@ function searchedImage() {
     })
     .catch((err) => console.error(err));
 }
-
 fetchButton.addEventListener("click", function (event) {
   event.preventDefault();
   searchedImage();
   generation();
 });
 //! CYRUS img generation END
-
 //! Share Button Functionality
 var shareData = {
   title: "Meme Generator",
   text: "Share Meme Generator!",
   url: "https://r31zh.github.io/Project-1/",
 };
-
 var btn = document.getElementById("shareBtn");
 // Share must be triggered by "user activation"
 btn.addEventListener("click", async () => {
@@ -88,7 +80,6 @@ btn.addEventListener("click", async () => {
   } catch (err) {}
 });
 //! Share Button Functionality
-
 //!Download Button Functionality
 var downloadFunction = document.getElementById("downloadBtn");
 downloadFunction.addEventListener("click", function (event) {
