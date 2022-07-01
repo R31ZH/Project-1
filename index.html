@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   <!--JQuery-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="agit nonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
     integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
     crossorigin="anonymous"></script>
@@ -19,8 +19,8 @@
 <body>
   <div id="header"
     class="back-image-white flex flex-col sm:flex-row w-full leading-tight sm:leading-loose justify-between">
-    <div class="back-image-white flex flex-col md:flex-row w-full">
-      <h1 class="font-bold text-3xl ml-12 w-full min-w-0 border-2 rounded-lg bg-slate-400 border-zinc-800 text-center">
+    <div class="back-image-white flex flex-col md:flex-row w-auto">
+      <h1 class="font-bold text-3xl ml-12 w-full min-w-0 border-2 rounded-lg bg-slate-400 border-zinc-800">
         Welcome to Meme Generator!
       </h1>
     </div>
@@ -72,10 +72,10 @@
 
   <div class="grid gap-4 sm:w-auto">
     <!--DOWNLOAD BUTTON-->
-    <a id="downloadBtn" download="meme.jpg"
-      class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-3 col-end-5 border-4 border-y-zinc-600 border-x-zinc-800 text-center">
+    <button id="downloadBtn"
+      class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-3 col-end-5 border-4 border-y-zinc-600 border-x-zinc-800">
       Download
-    </a>
+    </button>
 
     <!--SHARE BUTTON-->
     <button id="shareBtn"
