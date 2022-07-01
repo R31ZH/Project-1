@@ -28,7 +28,7 @@
     >
       <div class="back-image-white flex flex-col md:flex-row w-auto">
         <h1
-          class="font-nogo text-3xl ml-4 w-full min-w-0 border-2 rounded-lg bg-[#014f86] border-yellow-900"
+          class="font-bold text-3xl ml-9 w-full min-w-0 border-2 rounded-lg bg-slate-400 border-zinc-800"
         >
           Welcome to Meme Generator!
         </h1>
@@ -43,7 +43,7 @@
     </div>
     <div class="flex flex-col sm:flex-row">
       <div
-        class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow-0 border-2 border-solid border-black"
+        class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow-0 border-2 border-solid border-black col-start-4 col-end-6"
       >
         <h1
           class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted"
@@ -59,15 +59,15 @@
         <!-- ! CYRUS SEARCH -->
         <div class="searchBoxDiv">
           <form action="" method="post" id="location-form">
-            <label for="imageFor">Input Your Subject to the Right:</label>
+            <label for="imageFor">Input Your Image Search to the Right:</label>
             <input
-              class="border-2 rounded-lg border-red-800"
               type="text"
               id="imageSearch"
               name="images"
+              class="hover:border-dotted hover:border-blue-500 border-2 rounded-lg border-emerald-900"
             /><br /><br />
             <input
-              class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black border-red-800"
+              class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black border-4 border-y-zinc-600 border-x-zinc-800"
               id="submitBtn"
               type="submit"
               value="Generate Meme"
@@ -75,11 +75,6 @@
           </form>
         </div>
         <!-- ! CYRUS SEARCH -->
-        <!-- <div class="content-center mx-auto my-2"> -->
-        <!--SEARCH BUTTON-->
-        <!-- <button id="btn1" class="bg-blue-500 hover:bg-teal-200 p-2 rounded-lg border border-solid border-black ">
-          Generate Meme</button>
-      </div> -->
       </div>
       <div
         class="back-image-white w-full mt-1 sm:mt-5 mx-0 sm:mx-2 sm:rounded-lg px-2 pb-2 sm:w-auto flex-grow border-2 border-solid border-black"
@@ -98,11 +93,11 @@
       </table>
     </div>
 
-    <div class="grid gap-4">
+    <div class="grid gap-4 sm:w-auto">
       <!--DOWNLOAD BUTTON-->
       <button
         id="downloadBtn"
-        class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-1 col-end-3 border-red-800"
+        class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-3 col-end-5 border-4 border-y-zinc-600 border-x-zinc-800"
       >
         Download
       </button>
@@ -110,7 +105,7 @@
       <!--SHARE BUTTON-->
       <button
         id="shareBtn"
-        class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-5 col-end-7 border-red-800"
+        class="bg-[#014f86] hover:bg-[#9a8c98] pr-9 p-2 rounded-lg border border-solid border-black col-start-5 col-end-7 border-4 border-y-zinc-600 border-x-zinc-800"
       >
         Share
       </button>
