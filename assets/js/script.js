@@ -11,7 +11,7 @@ function generation() {
       var quote = document.createElement("textarea");
       quote.setAttribute(
         "class",
-        "bg-blue-500 text-white w-full inset-x-0 top-0"
+        "text-black w-full inset-x-0 top-0"
       );
       quote.textContent = data.content;
       div.appendChild(quote);
@@ -31,6 +31,7 @@ var options = {
 var fetchButton = document.getElementById("submitBtn");
 var recentSearch = JSON.parse(localStorage.getItem("recentSearch")) || [];
 var imageLoc = document.querySelector("#imageLoc");
+var savedPic 
 function myFunction() {
   document.getElementById("myForm").submit();
 }
@@ -56,6 +57,7 @@ function searchedImage() {
       console.log(response.response.images[0].image.url);
       var imagesearched = document.createElement("img");
       imagesearched.setAttribute("src", response.response.images[0].image.url);
+      savedPic = response.response.images[0].image.url
       imageLoc.appendChild(imagesearched);
     })
     .catch((err) => console.error(err));
@@ -84,9 +86,17 @@ btn.addEventListener("click", async () => {
 var downloadFunction = document.getElementById("downloadBtn");
 downloadFunction.addEventListener("click", function (event) {
   // var download1 = document.getElementById("downloadBtn");
-  const blob1 = new Blob([imageLoc], { type: ".jpg" });
-  downloadFunction.href = URL.createObjectURL(blob1);
-  console.log(blob1);
+  console.log(savedPic)
+  fetch(savedPic)
+  .then(function(data){
+    return data.blob()
+  })
+  .then(function(blob1){
+    downloadFunction.href = URL.createObjectURL(blob1);
+  })
+  // const blob1 = new Blob([savedPic], { type: ".jpg" });
+  
+  // console.log(blob1);
 });
 //!Download Button Functionality
 
