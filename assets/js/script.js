@@ -1,7 +1,6 @@
 //! Jeremiahs Quote Generation START
 var div = document.getElementById("textarea");
 var btn = document.getElementById("btn1");
-
 function generation() {
   fetch("https://quotes15.p.rapidapi.com/quotes/random/", options)
     .then(function (response) {
@@ -12,7 +11,7 @@ function generation() {
       var quote = document.createElement("textarea");
       quote.setAttribute(
         "class",
-        "bg-blue-500 text-white w-full inset-x-0 top-0"
+        "text-black w-full inset-x-0 top-0"
       );
       quote.textContent = data.content;
       div.appendChild(quote);
@@ -20,7 +19,6 @@ function generation() {
       element.remove();
     });
 }
-
 var options = {
   method: "GET",
   headers: {
@@ -29,20 +27,18 @@ var options = {
   },
 };
 //! Jeremiahs Quote Generation END
-
 //! CYRUS img generation START
 var fetchButton = document.getElementById("submitBtn");
 var recentSearch = JSON.parse(localStorage.getItem("recentSearch")) || [];
 var imageLoc = document.querySelector("#imageLoc");
+var savedPic 
 function myFunction() {
   document.getElementById("myForm").submit();
 }
-
 function searchedImage() {
   var imageName = $("#imageSearch").val();
   recentSearch.push(imageName);
   localStorage.setItem("recentSearch", JSON.stringify(recentSearch));
-
   const options = {
     method: "GET",
     headers: {
@@ -61,25 +57,23 @@ function searchedImage() {
       console.log(response.response.images[0].image.url);
       var imagesearched = document.createElement("img");
       imagesearched.setAttribute("src", response.response.images[0].image.url);
+      savedPic = response.response.images[0].image.url
       imageLoc.appendChild(imagesearched);
     })
     .catch((err) => console.error(err));
 }
-
 fetchButton.addEventListener("click", function (event) {
   event.preventDefault();
   searchedImage();
   generation();
 });
 //! CYRUS img generation END
-
 //! Share Button Functionality
 var shareData = {
   title: "Meme Generator",
   text: "Share Meme Generator!",
   url: "https://r31zh.github.io/Project-1/",
 };
-
 var btn = document.getElementById("shareBtn");
 // Share must be triggered by "user activation"
 btn.addEventListener("click", async () => {
@@ -88,13 +82,31 @@ btn.addEventListener("click", async () => {
   } catch (err) {}
 });
 //! Share Button Functionality
-
 //!Download Button Functionality
 var downloadFunction = document.getElementById("downloadBtn");
 downloadFunction.addEventListener("click", function (event) {
   // var download1 = document.getElementById("downloadBtn");
-  const blob1 = new Blob([imageLoc], { type: ".jpg" });
-  downloadFunction.href = URL.createObjectURL(blob1);
-  console.log(blob1);
+  console.log(savedPic)
+  fetch(savedPic)
+  .then(function(data){
+    return data.blob()
+  })
+  .then(function(blob1){
+    downloadFunction.href = URL.createObjectURL(blob1);
+  })
+  // const blob1 = new Blob([savedPic], { type: ".jpg" });
+  
+  // console.log(blob1);
 });
 //!Download Button Functionality
+
+
+
+
+
+
+
+
+
+
+
