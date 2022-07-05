@@ -50,7 +50,7 @@
           <input type="text" id="imageSearch" name="images"
             class="hover:border-dotted hover:border-blue-500 border-2 rounded-lg border-emerald-900" /><br /><br />
           <input
-            class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black border-4 border-y-zinc-600 border-x-zinc-800 text-slate-300"
+            class="bg-[#014F86] hover:bg-[#9A8C98] p-2 rounded-lg border border-solid border-black border-4 border-y-zinc-600 border-x-zinc-800 text-slate-300"
             id="submitBtn" type="submit" value="Generate Meme" />
         </form>
       </div>
@@ -62,31 +62,25 @@
         class="font-agh font-bold text-2xl leading-tight text-center sm:rounded-t-lg border-b-2 border-black border-dotted">
         Meme Product
       </h1>
-      <div id="imageLoc"></div>
-
+      <div id="imageLoc" class="picture"></div>
       <div id="textarea"></div>
     </div>
-    <table id="events" class="p-2">
-      <tr></tr>
-    </table>
-  </div>
 
+  </div>
   <div class="grid gap-4 sm:w-auto">
     <!--DOWNLOAD BUTTON-->
-    <a id="downloadBtn" download="meme.jpg"
+    <a id="downloadBtn" download="meme"
       class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-3 col-end-5 border-4 border-y-zinc-600 border-x-zinc-800 text-center mr-20 text-slate-300">
       Download
     </a>
-
     <!--SHARE BUTTON-->
     <button id="shareBtn"
-      class="bg-[#014f86] hover:bg-[#9a8c98] p-2 rounded-lg border border-solid border-black col-start-5 col-end-7 border-4 border-y-zinc-600 border-x-zinc-800 mr-20 text-slate-300">
+      class="bg-[#014F86] hover:bg-[#9A8C98] p-2 rounded-lg border border-solid border-black col-start-5 col-end-7 border-4 border-y-zinc-600 border-x-zinc-800 mr-20 text-slate-300">
       Share
     </button>
   </div>
   <div class="flex flex-col sm:flex-row w-full" id="image-div"></div>
   <div id="secondModel" class="model"></div>
-
   <script src="./assets/js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
